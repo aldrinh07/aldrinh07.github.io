@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Aldrin Hernando - Web Developer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-ng-controller="mainCtrl"  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    Home
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#web">Web Dev</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#music">Music</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#photography">Photography</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Aldrin Hernando</h1>
+                        <p class="intro-text">Web Developer, Composer, Photographer</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>About</h2>
+                    <p>Highly Motivated Web Developer who just graduated from DevMountain Web Development Bootcamp.</p>
+                    <ul>
+                        <li>Front-End Web Development, HTML, CSS & AngularJS Framework.</li>
+                        <li>Responsive Single-Page Web Applications.</li>
+                        <li>Excellent Communication and Problem-Solving Skills</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+    <!-- Web Development Section -->
+    <section id="web" class="content-section text-center">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Web Development</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="content-section text-center">
+            <!--<div class="container">-->
+                <!--<div class="col-lg-8 col-lg-offset-2">-->
+                    {{test}}
+                    Hide: <input type="checkbox" data-ng-model="isHidden" />
+                    <h2>Music Compositions</h2>
+                    <div class="album-container">
+                        <h4>Albums</h4>
+                        <ul class="list-inline">
+                            <li>
+                                <a class="btn btn-default btn-lg btn-album" ng-click="album1()">You Changed(2012)</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-default btn-lg btn-album" ng-click="album2()">Forever Mine(2014)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<p><a href="audio/turnaround.mp3">Track 1</a></p>-->
+                    <!--<p><a href="audio/Solitude.mp3">Track 2</a></p>-->
+                    <!--<audio controls="controls">-->
+                        <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
+                        <!--Your browser does not support the HTML5 audio element.-->
+                    <!--</audio>-->
+                    <!--<p>You can download my music for free!.</p>-->
+                    <!--background player-->
+                    <div id="backgroundaudio">
+                        <i class="glyphicon glyphicon-music"></i>
+                        <audio id="audio" preload="auto" tabindex="0" controls="" >
+                            <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <!--<audio id="audio" preload="auto" tabindex="0" controls="" >-->
+                    <!--</audio>-->
+                    <ul id="playlist" class="song-container" data-ng-show="showalbum1">
+                        <li class="active song">
+                            <a class="songClick" href="audio/turnaround.mp3">
+                                Turnaround - Josh & Aldrin
+                            </a>
+                        </li>
+                        <li class="song">
+                            <a class="songClick" href="audio/Solitude.mp3">
+                                Solitude - Josh & Aldrin
+                            </a>
+                        </li>
+                        <li class="song">
+                            <a class="songClick" href="audio/Fearless.mp3">
+                                Fearless - Aldrin
+                            </a>
+                        </li>
+                        <li class="song">
+                            <a class="songClick" href="audio/Dreams.mp3">
+                                Dreams - Aldrin feat. JB
+                            </a>
+                        </li>
+                        <li class="song">
+                            <a class="songClick" href="audio/Free.mp3">
+                                Free - Aldrin feat. JB
+                            </a>
+                        </li>
+                        <li class="song">
+                            <a class="songClick" href="audio/TheIsland.mp3">
+                                The Island - Aldrin feat. Joe Knight
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="playlist" class="song-container" data-ng-show="showalbum2">
+                        <li class="song">
+                            <a class="songClick" href="audio/TheIsland.mp3">
+                                The Island - Aldrin feat. Joe Knight
+                            </a>
+                        </li>
+                    </ul>
+                    <!--<a href="" class="btn btn-default btn-lg">Visit Download Page</a>-->
+    <!-- Music Player -->
+                <!--</div>-->
+            <!--</div>-->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="photography" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Photography</h2>
+                <p></p>
+                <ul class="list-inline banner-social-buttons">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <p>Feel free to email me, whether you need help with anything, or to just say hello!</p>
+                <p><a href="mailto:aldrinh@live.com">aldrinh@live.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                    <li>
+                        <a href="" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Aldrin Hernando 2014</p>
+        </div>
+    </footer>
+    <!--angularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mainCtrl.js"></script>
+</body>
+
+</html>
