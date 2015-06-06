@@ -1,7 +1,7 @@
 var app = angular.module('myApp');
 
 
-app.controller('mainCtrl', function($scope){
+app.controller('mainCtrl', function($scope, $http){
 
     $scope.test = "test worked";
 
