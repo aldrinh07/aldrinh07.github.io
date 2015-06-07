@@ -151,8 +151,9 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
+    border-bottom: 1px red solid;
     /*background: url(../img/aldrin.jpg) no-repeat bottom center scroll;*/
-    background-color: #000;
+    /*background-color: rgba(255,255,255,.3);*/
     /*-webkit-background-size: cover;*/
     /*-moz-background-size: cover;*/
     /*background-size: cover;*/
@@ -199,7 +200,7 @@ a:focus {
 
 #music {
     background: url(../img/Record.png) no-repeat bottom center scroll;
-    background-color: #000;
+    background-color: rgba(255,255,255,.3);
     -webkit-background-size: auto 100%;
     -moz-background-size: auto 100%;
     background-size: auto 100%;
@@ -283,9 +284,11 @@ a:focus {
 }
 
 .content-section {
-    outline: 1px red solid;
+    /*outline: 1px red solid;*/
     padding-top: 66px;
     min-height: 100%;
+    max-height: 100%;
+    border-bottom: 1px solid red;
 }
 
 
@@ -305,10 +308,21 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
+.musicBtn {
+    cursor: pointer;
+}
+
+.musicBtn:hover {
+
+}
+
+
 .btn-default {
-    border: 1px solid #42dca3;
+    height: 45px !important;
+    border: 1px solid #42dca3 !important;
     color: #42dca3;
     background-color: transparent;
+    background-image: none !important;
 }
 
 .btn-default:hover,
@@ -321,6 +335,33 @@ a:focus {
 
 .btn-album {
     border: 1px solid #42dca3;
+    color: #42dca3;
+    background-color: transparent;
+}
+
+.btn-albumCover {
+    width: 250px;
+    height: 250px;
+    border: 2px solid gainsboro;
+    margin: 10px;
+}
+
+
+.cover1 {
+    background-image: url(../img/YouChangedCover.jpg);
+    background-size: cover;
+}
+
+.cover2 {
+    background-image: url(../img/ForeverMineCover.jpg);
+    background-size: cover;
+}
+
+.btn-albumMain {
+    font-size: 20px;
+}
+
+.btn-albumMain:hover {
     color: #42dca3;
     background-color: transparent;
 }
@@ -395,10 +436,10 @@ body {
     /*top: 100px;*/
 /*}*/
 
-#backgroundaudio {
+.bgaudio {
     display: flex;
     position: fixed;
-    top: 56px;
+    bottom: 50px;
     right: -300px;
     background-color: red;
     align-items: center;
@@ -408,21 +449,15 @@ body {
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
 }
-#backgroundaudio:hover {
-    top: 56;
-    right: 0px;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+.bgaudioclick {
+    right: 0px !important;
 }
-#backgroundaudio audio {
+.bgaudio audio, .bgaudioclick audio {
     padding: 5px;
     height: 43px;
     z-index: 9998;
 }
-#backgroundaudio i {
+.bgaudio i, .bgaudioclick i {
     font-size: 40px;
     display: block;
     padding: 5px;
@@ -437,12 +472,72 @@ body {
     height: 400px;
     white-space: nowrap;
     overflow-x: auto;
-    outline: solid 1px orange;
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
+.inline {
+    /*outline: 1px solid orange;*/
+    display: inline-block;
 }
 
 .song {
-    display: inline-block;
-    outline: solid 1px blue;
-    height: 300px;
-    width: 300px;
+    /*outline: 1px solid blue;*/
+    padding: 10px;
+    border: 2px solid gainsboro;
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+}
+
+.play-btn {
+    /*outline: 1px red solid;*/
+    height: 128px;
+    width: 128px;
+    margin: 0 auto;
+    background-color: white;
+    opacity: .3;
+    background-size: cover;
+    -webkit-mask-image: url(../img/PlayButton.png);
+}
+
+.play-btn:hover {
+    opacity: .9;
+}
+
+.line {
+    width: 70%;
+    border-top: 1px solid red;
+    margin: 0 auto;
+}
+
+.up20 {
+    margin-top: -20px;
+}
+
+.songDetails {
+    padding-left: 15px;
+}
+
+.grow {
+    transition: all .04s ease-in-out;
+}
+.grow:hover {
+    transform: scale(1.05);
+}
+
+h5, .songDetails p {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+h5 span, p span {
+    color: red;
+    text-align: left;
+    font-size: 12px;
+}
+
+.darkFont {
+    color: red;
 }

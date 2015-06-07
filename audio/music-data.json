@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Turn Around",
+        "album": "You Changed",
+        "ref": "audio/turnaround.mp3",
+        "artist": "Aldrin feat. Josh",
+        "length": "04:58"
+    },
+    {
+        "title": "Solitude",
+        "album": "You Changed",
+        "ref": "audio/Solitude.mp3",
+        "artist": "Aldrin feat. Josh",
+        "length": "04:30"
+    },
+    {
+        "title": "Fearless",
+        "album": "You Changed",
+        "ref": "audio/Fearless.mp3",
+        "artist": "Aldrin",
+        "length": "03:00"
+    },
+    {
+        "title": "Dreams",
+        "album": "You Changed",
+        "ref": "audio/Dreams.mp3",
+        "artist": "Aldrin feat. JB",
+        "length": "03:00"
+    },
+    {
+        "title": "Free",
+        "album": "You Changed",
+        "ref": "audio/Free.mp3",
+        "artist": "Aldrin feat. JB",
+        "length": "03:08"
+    },
+    {
+        "title": "The Island",
+        "album": "You Changed",
+        "ref": "audio/TheIsland.mp3",
+        "artist": "Aldrin feat. Joe Knight",
+        "length": "02:47"
+    },
+    {
+        "title": "Will You",
+        "album": "Forever Mine",
+        "ref": "audio/WillYou.mp3",
+        "artist": "Aldrin",
+        "length": "03:24"
+    }
+]

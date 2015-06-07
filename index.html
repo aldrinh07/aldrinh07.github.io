@@ -81,7 +81,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Aldrin Hernando</h1>
-                        <p class="intro-text">Web Developer, Composer, Photographer</p>
+                        <p class="intro-text">Web Developer, Music Composer, Photographer</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -96,6 +96,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>About</h2>
+                    <div class="line up20"></div>
                     <p>Highly Motivated Web Developer who just graduated from DevMountain Web Development Bootcamp.</p>
                     <ul>
                         <li>Front-End Web Development, HTML, CSS & AngularJS Framework.</li>
@@ -111,86 +112,164 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Web Development</h2>
+                <div class="line up20"></div>
             </div>
         </div>
     </section>
 
     <!-- Music Section -->
     <section id="music" class="content-section text-center">
-            <!--<div class="container">-->
-                <!--<div class="col-lg-8 col-lg-offset-2">-->
-                    <h2>Music Compositions</h2>
-                    <div class="album-container">
-                        <h4>Albums</h4>
-                        <ul class="list-inline">
-                            <li>
-                                <a class="btn btn-default btn-lg btn-album" ng-click="album1()">You Changed(2012)</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-default btn-lg btn-album" ng-click="album2()">Forever Mine(2014)</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--<p><a href="audio/turnaround.mp3">Track 1</a></p>-->
-                    <!--<p><a href="audio/Solitude.mp3">Track 2</a></p>-->
-                    <!--<audio controls="controls">-->
-                        <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
-                        <!--Your browser does not support the HTML5 audio element.-->
-                    <!--</audio>-->
-                    <!--<p>You can download my music for free!.</p>-->
-                    <!--background player-->
-                    <div id="backgroundaudio">
-                        <i class="glyphicon glyphicon-music"></i>
-                        <audio id="audio" preload="auto" tabindex="0" controls="" >
-                            <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
-                            Your browser does not support the audio element.
-                        </audio>
-                    </div>
-                    <!--<audio id="audio" preload="auto" tabindex="0" controls="" >-->
-                    <!--</audio>-->
-                    <ul id="playlist" class="song-container" data-ng-show="showalbum1">
-                        <li class="active song">
-                            <a class="songClick" href="https://dl-web.dropbox.com/get/Album/turnaround.mp3?_subject_uid=147182972&w=AAABdKcy715ov6WF_iz_XIAsnuJW7loPsKzg3AXljYU0-A">
-                                Turnaround - Josh & Aldrin
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a class="songClick" href="audio/Solitude.mp3">
-                                Solitude - Josh & Aldrin
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a class="songClick" href="audio/Fearless.mp3">
-                                Fearless - Aldrin
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a class="songClick" href="audio/Dreams.mp3">
-                                Dreams - Aldrin feat. JB
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a class="songClick" href="audio/Free.mp3">
-                                Free - Aldrin feat. JB
-                            </a>
-                        </li>
-                        <li class="song">
-                            <a class="songClick" href="audio/TheIsland.mp3">
-                                The Island - Aldrin feat. Joe Knight
-                            </a>
-                        </li>
-                    </ul>
-                    <ul id="playlist" class="song-container" data-ng-show="showalbum2">
-                        <li class="song">
-                            <a class="songClick" href="audio/TheIsland.mp3">
-                                The Island - Aldrin feat. Joe Knight
-                            </a>
-                        </li>
-                    </ul>
-                    <!--<a href="" class="btn btn-default btn-lg">Visit Download Page</a>-->
-    <!-- Music Player -->
-                <!--</div>-->
-            <!--</div>-->
+        <!--<div class="container">-->
+        <!--<div class="col-lg-8 col-lg-offset-2">-->
+        <h2>Music Compositions</h2>
+        <div class="line up20"></div>
+        <div class="album-container">
+            <h4 class="btn btn-albumMain" ng-click="albumclick(); miniAlbum=''">Albums</h4>
+            <ul class="list-inline">
+                <!--<li>-->
+                    <!--<a class="btn btn-default btn-lg btn-album" ng-click="album1click()">You Changed(2012)</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a class="btn btn-default btn-lg btn-album" ng-click="album2click()">Forever Mine(2014)</a>-->
+                <!--</li>-->
+
+                <li>
+                    <a class="btn btn-albumCover cover1" data-ng-class="miniAlbum" ng-click="album1click(); miniAlbum='btn-default btn-lg btn-album'">You Changed (2010)</a>
+                </li>
+                <li>
+                    <a class="btn btn-albumCover cover2" data-ng-class="miniAlbum" ng-click="album2click(); miniAlbum='btn-default btn-lg btn-album'">Forever Mine (2012)</a>
+                </li>
+            </ul>
+        </div>
+        <div class="bgaudio" data-ng-class="{'bgaudioclick' : toggle}">
+            <i class="glyphicon glyphicon-music musicBtn grow" ng-click="toggle = !toggle"></i>
+            <audio id="audio" preload="auto" tabindex="0" controls="" >
+                <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <ul id="playlist" class="song-container" data-ng-show="showalbum">
+            <li class="inline" data-ng-show="showalbum1">
+                <div class="song cover1">
+                    <h4>01-Turnaround</h4>
+                    <a class="songClick" href="https://dl-web.dropbox.com/get/Album/turnaround.mp3?_subject_uid=147182972&w=AAABdKcy715ov6WF_iz_XIAsnuJW7loPsKzg3AXljYU0-A">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
+                    <h5><span>Duration: </span>4:58</h5>
+                </div>
+            </li>
+
+            <li class="inline" data-ng-show="showalbum1">
+                <div class="song cover1">
+                    <h4>Solitude</h4>
+                    <a class="songClick" href="audio/Solitude.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
+                    <h5><span>Duration: </span>4:30</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum1">
+                <div class="song cover1">
+                    <h4>Fearless</h4>
+                    <a class="songClick" href="audio/Fearless.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin</h5>
+                    <h5><span>Duration: </span>3:00</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum1">
+                <div class="song cover1">
+                    <h4>Dreams</h4>
+                    <a class="songClick" href="audio/Dreams.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin & JB</h5>
+                    <h5><span>Duration: </span>3:43</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum1">
+                <div class="song cover1">
+                    <h4>Free</h4>
+                    <a class="songClick" href="audio/Free.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin & JB</h5>
+                    <h5><span>Duration: </span>3:08</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum1">
+                <div class="song cover1">
+                    <h4>The Island</h4>
+                    <a class="songClick" href="audio/TheIsland.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin & Joe Knight</h5>
+                    <h5><span>Duration: </span>2:47</h5>
+                </div>
+            <li class="inline" data-ng-show="showalbum2">
+                <div class="song cover2">
+                    <h4 class="darkFont">Will You</h4>
+                    <a class="songClick" href="audio/WillYou.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin</h5>
+                    <h5><span>Duration: </span>3:24</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum2">
+                <div class="song cover2">
+                    <h4 class="darkFont">Closer To You</h4>
+                    <a class="songClick" href="audio/CloserToYou.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
+                    <h5><span>Duration: </span>4:07</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum2">
+                <div class="song cover2">
+                    <h4 class="darkFont">Unquenchable Fire</h4>
+                    <a class="songClick" href="audio/UnquenchableFire.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin</h5>
+                    <h5><span>Duration: </span>4:27</h5>
+                </div>
+            </li>
+            <li class="inline" data-ng-show="showalbum2">
+                <div class="song cover2">
+                    <h4 class="darkFont">Night To Day</h4>
+                    <a class="songClick" href="audio/NightToDay.mp3">
+                        <div class="play-btn"></div>
+                    </a>
+                </div>
+                <div class="songDetails">
+                    <h5><span>artist: </span>Aldrin</h5>
+                    <h5><span>Duration: </span>4:17</h5>
+                </div>
+            </li>
+        </ul>
     </section>
 
     <!-- Contact Section -->
@@ -198,6 +277,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Photography</h2>
+                <div class="line up20"></div>
                 <p></p>
                 <ul class="list-inline banner-social-buttons">
 
