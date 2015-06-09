@@ -92,7 +92,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="container text-center">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>About</h2>
@@ -119,20 +119,13 @@
 
     <!-- Music Section -->
     <section id="music" class="content-section text-center">
-        <!--<div class="container">-->
+        <div class="recordImg"></div>
         <!--<div class="col-lg-8 col-lg-offset-2">-->
-        <h2>Music Compositions</h2>
+        <h2>Music</h2>
         <div class="line up20"></div>
         <div class="album-container">
             <h4 class="btn btn-albumMain" ng-click="albumclick(); miniAlbum=''">Albums</h4>
             <ul class="list-inline">
-                <!--<li>-->
-                    <!--<a class="btn btn-default btn-lg btn-album" ng-click="album1click()">You Changed(2012)</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<a class="btn btn-default btn-lg btn-album" ng-click="album2click()">Forever Mine(2014)</a>-->
-                <!--</li>-->
-
                 <li>
                     <a class="btn btn-albumCover cover1" data-ng-class="miniAlbum" ng-click="album1click(); miniAlbum='btn-default btn-lg btn-album'">You Changed (2010)
                     </a>
@@ -150,7 +143,7 @@
             </audio>
         </div>
         <ul id="playlist" class="song-container" data-ng-show="showalbum">
-            <li class="inline" data-ng-show="showalbum1">
+            <li class="songBlock" data-ng-show="showalbum1">
                 <div class="song cover1">
                     <h4>Turnaround</h4>
                     <a class="songClick" href="https://dl-web.dropbox.com/get/Album/turnaround.mp3?_subject_uid=147182972&w=AAABdKcy715ov6WF_iz_XIAsnuJW7loPsKzg3AXljYU0-A">
@@ -163,7 +156,7 @@
                 </div>
             </li>
 
-            <li class="inline" data-ng-show="showalbum1">
+            <li class="songBlock" data-ng-show="showalbum1">
                 <div class="song cover1">
                     <h4>Solitude</h4>
                     <a class="songClick" href="audio/Solitude.mp3">
@@ -175,7 +168,7 @@
                     <h5><span>Duration: </span>4:30</h5>
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum1">
+            <li class="songBlock" data-ng-show="showalbum1">
                 <div class="song cover1">
                     <h4>Fearless</h4>
                     <a class="songClick" href="audio/Fearless.mp3">
@@ -187,7 +180,7 @@
                     <h5><span>Duration: </span>3:00</h5>
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum1">
+            <li class="songBlock" data-ng-show="showalbum1">
                 <div class="song cover1">
                     <h4>Dreams</h4>
                     <a class="songClick" href="audio/Dreams.mp3">
@@ -199,7 +192,7 @@
                     <h5><span>Duration: </span>3:43</h5>
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum1">
+            <li class="songBlock" data-ng-show="showalbum1">
                 <div class="song cover1">
                     <h4>Free</h4>
                     <a class="songClick" href="audio/Free.mp3">
@@ -211,7 +204,7 @@
                     <h5><span>Duration: </span>3:08</h5>
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum1">
+            <li class="songBlock" data-ng-show="showalbum1">
                 <div class="song cover1">
                     <h4>The Island</h4>
                     <a class="songClick" href="audio/TheIsland.mp3">
@@ -222,7 +215,7 @@
                     <h5><span>artist: </span>Aldrin & Joe Knight</h5>
                     <h5><span>Duration: </span>2:47</h5>
                 </div>
-            <li class="inline" data-ng-show="showalbum2">
+            <li class="songBlock" data-ng-show="showalbum2">
                 <div class="song cover2">
                     <h4 class="darkFont">Will You</h4>
                     <a class="songClick" href="audio/WillYou.mp3">
@@ -234,7 +227,7 @@
                     <h5><span>Duration: </span>3:24</h5>
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum2">
+            <li class="songBlock" data-ng-show="showalbum2">
                 <div class="song cover2">
                     <h4 class="darkFont">Closer To You</h4>
                     <a class="songClick" href="audio/CloserToYou.mp3">
@@ -246,7 +239,7 @@
                     <h5><span>Duration: </span>4:07</h5>
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum2">
+            <li class="songBlock" data-ng-show="showalbum2">
                 <div class="song cover2">
                     <h4 class="darkFont">Unquenchable Fire</h4>
                     <a class="songClick" href="audio/UnquenchableFire.mp3">
@@ -256,9 +249,11 @@
                 <div class="songDetails">
                     <h5><span>artist: </span>Aldrin</h5>
                     <h5><span>Duration: </span>4:27</h5>
+                    <h5><span>test: </span>4:27</h5>
+
                 </div>
             </li>
-            <li class="inline" data-ng-show="showalbum2">
+            <li class="songBlock" data-ng-show="showalbum2">
                 <div class="song cover2">
                     <h4 class="darkFont">Night To Day</h4>
                     <a class="songClick" href="audio/NightToDay.mp3">
@@ -273,7 +268,20 @@
         </ul>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Photography Section -->
+    <!--<section id="photography" class="container content-section text-center">-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-8 col-lg-offset-2">-->
+                <!--<h2>Photography</h2>-->
+                <!--<div class="line up20"></div>-->
+                <!--<p></p>-->
+                <!--<ul class="list-inline banner-social-buttons">-->
+
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+
     <section id="photography" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -292,6 +300,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
+                <div class="line up20"></div>
                 <p>Feel free to email me, whether you need help with anything, or to just say hello!</p>
                 <p><a href="mailto:aldrinh@live.com">aldrinh@live.com</a>
                 </p>
