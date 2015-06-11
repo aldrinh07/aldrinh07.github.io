@@ -5,6 +5,20 @@ app.controller('mainCtrl', function($scope, $http){
 
     $scope.test = "test worked";
 
+//    $(window).scroll(function() {
+//        if ($(window).scrollTop() > 25) {
+//            $scope.scrollLoc = true;
+//        } else {
+//            $scope.scrollLoc = false;
+//        }
+//        $scope.$apply();
+//    });
+
+//    $(window).scroll(function() {
+//        $scope.scrollLoc = $(window).scrollTop();
+//        $scope.$apply();
+//    });
+
     $scope.albumclick = function(){
         $scope.showalbum = false;
         $scope.showalbum1 = false;
@@ -15,7 +29,6 @@ app.controller('mainCtrl', function($scope, $http){
         $scope.showalbum = true;
         $scope.showalbum1 = true;
         $scope.showalbum2 = false;
-        $scope.minialbum = "minimizeAlbum";
     }
 
     $scope.album2click = function(){

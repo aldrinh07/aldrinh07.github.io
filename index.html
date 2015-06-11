@@ -30,9 +30,7 @@
     <![endif]-->
 
 </head>
-
 <body data-ng-controller="mainCtrl"  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -44,6 +42,7 @@
                     Home
                 </a>
             </div>
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -92,11 +91,12 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+    <section id="about" class="text-center">
+                <div class="header">
                     <h2>About</h2>
-                    <div class="line up20"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="aboutBody">
                     <p>Highly Motivated Web Developer who just graduated from DevMountain Web Development Bootcamp.</p>
                     <ul>
                         <li>Front-End Web Development, HTML, CSS & AngularJS Framework.</li>
@@ -104,26 +104,26 @@
                         <li>Excellent Communication and Problem-Solving Skills</li>
                     </ul>
                 </div>
-            </div>
     </section>
 
     <!-- Web Development Section -->
     <section id="web" class="content-section text-center">
-        <div class="container">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="header">
                 <h2>Web Development</h2>
                 <div class="line up20"></div>
             </div>
-        </div>
+            <div class="webBody"></div>
     </section>
 
     <!-- Music Section -->
     <section id="music" class="content-section text-center">
-        <div class="recordImg"></div>
-        <!--<div class="col-lg-8 col-lg-offset-2">-->
-        <h2>Music</h2>
-        <div class="line up20"></div>
-        <div class="album-container">
+        <div class="header">
+            <!--<div class="col-lg-8 col-lg-offset-2">-->
+            <h2>Music Compositions</h2>
+            <div class="line up20"></div>
+            <div class="recordImg"></div>
+        </div>
+        <div class="musicBody">
             <h4 class="btn btn-albumMain" ng-click="albumclick(); miniAlbum=''">Albums</h4>
             <ul class="list-inline">
                 <li>
@@ -134,164 +134,148 @@
                     <a class="btn btn-albumCover cover2" data-ng-class="miniAlbum" ng-click="album2click(); miniAlbum='btn-default btn-lg btn-album'">Forever Mine (2012)</a>
                 </li>
             </ul>
-        </div>
-        <div class="bgaudio" data-ng-class="{'bgaudioclick' : toggle}">
-            <i class="glyphicon glyphicon-music musicBtn grow" ng-click="toggle = !toggle"></i>
-            <audio id="audio" preload="auto" tabindex="0" controls="" >
-                <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <ul id="playlist" class="song-container" data-ng-show="showalbum">
-            <li class="songBlock" data-ng-show="showalbum1">
-                <div class="song cover1">
-                    <h4>Turnaround</h4>
-                    <a class="songClick" href="https://dl-web.dropbox.com/get/Album/turnaround.mp3?_subject_uid=147182972&w=AAABdKcy715ov6WF_iz_XIAsnuJW7loPsKzg3AXljYU0-A">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
-                    <h5><span>Duration: </span>4:58</h5>
-                </div>
-            </li>
+            <div class="bgaudio" data-ng-class="{'bgaudioclick' : toggle}" data-ng-show="player">
+                <i class="glyphicon glyphicon-music musicBtn grow" ng-click="toggle = !toggle"></i>
+                <audio id="audio" preload="auto" tabindex="0" controls="" >
+                    <!--<source src="audio/turnaround.mp3" type="audio/mpeg">-->
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <ul id="playlist" class="song-container" ng-show="showalbum">
+                <li class="songBlock" data-ng-show="showalbum1">
+                    <div class="song cover1">
+                        <h4>Turnaround</h4>
+                        <a class="songClick" ng-click="player=true" href="https://dl-web.dropbox.com/get/Album/turnaround.mp3?_subject_uid=147182972&w=AAABdKcy715ov6WF_iz_XIAsnuJW7loPsKzg3AXljYU0-A">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
+                        <h5><span>Duration: </span>4:58</h5>
+                    </div>
+                </li>
 
-            <li class="songBlock" data-ng-show="showalbum1">
-                <div class="song cover1">
-                    <h4>Solitude</h4>
-                    <a class="songClick" href="audio/Solitude.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
-                    <h5><span>Duration: </span>4:30</h5>
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum1">
-                <div class="song cover1">
-                    <h4>Fearless</h4>
-                    <a class="songClick" href="audio/Fearless.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin</h5>
-                    <h5><span>Duration: </span>3:00</h5>
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum1">
-                <div class="song cover1">
-                    <h4>Dreams</h4>
-                    <a class="songClick" href="audio/Dreams.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin & JB</h5>
-                    <h5><span>Duration: </span>3:43</h5>
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum1">
-                <div class="song cover1">
-                    <h4>Free</h4>
-                    <a class="songClick" href="audio/Free.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin & JB</h5>
-                    <h5><span>Duration: </span>3:08</h5>
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum1">
-                <div class="song cover1">
-                    <h4>The Island</h4>
-                    <a class="songClick" href="audio/TheIsland.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin & Joe Knight</h5>
-                    <h5><span>Duration: </span>2:47</h5>
-                </div>
-            <li class="songBlock" data-ng-show="showalbum2">
-                <div class="song cover2">
-                    <h4 class="darkFont">Will You</h4>
-                    <a class="songClick" href="audio/WillYou.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin</h5>
-                    <h5><span>Duration: </span>3:24</h5>
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum2">
-                <div class="song cover2">
-                    <h4 class="darkFont">Closer To You</h4>
-                    <a class="songClick" href="audio/CloserToYou.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
-                    <h5><span>Duration: </span>4:07</h5>
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum2">
-                <div class="song cover2">
-                    <h4 class="darkFont">Unquenchable Fire</h4>
-                    <a class="songClick" href="audio/UnquenchableFire.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin</h5>
-                    <h5><span>Duration: </span>4:27</h5>
-                    <h5><span>test: </span>4:27</h5>
+                <li class="songBlock" data-ng-show="showalbum1">
+                    <div class="song cover1">
+                        <h4>Solitude</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/Solitude.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
+                        <h5><span>Duration: </span>4:30</h5>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum1">
+                    <div class="song cover1">
+                        <h4>Fearless</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/Fearless.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin</h5>
+                        <h5><span>Duration: </span>3:00</h5>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum1">
+                    <div class="song cover1">
+                        <h4>Dreams</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/Dreams.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin & JB</h5>
+                        <h5><span>Duration: </span>3:43</h5>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum1">
+                    <div class="song cover1">
+                        <h4>Free</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/Free.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin & JB</h5>
+                        <h5><span>Duration: </span>3:08</h5>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum1">
+                    <div class="song cover1">
+                        <h4>The Island</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/TheIsland.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin & Joe Knight</h5>
+                        <h5><span>Duration: </span>2:47</h5>
+                    </div>
+                <li class="songBlock" data-ng-show="showalbum2">
+                    <div class="song cover2">
+                        <h4 class="darkFont">Will You</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/WillYou.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin</h5>
+                        <h5><span>Duration: </span>3:24</h5>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum2">
+                    <div class="song cover2">
+                        <h4 class="darkFont">Closer To You</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/CloserToYou.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin & Josh Hatch</h5>
+                        <h5><span>Duration: </span>4:07</h5>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum2">
+                    <div class="song cover2">
+                        <h4 class="darkFont">Unquenchable Fire</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/UnquenchableFire.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin</h5>
+                        <h5><span>Duration: </span>4:27</h5>
+                        <h5><span>test: </span>4:27</h5>
 
-                </div>
-            </li>
-            <li class="songBlock" data-ng-show="showalbum2">
-                <div class="song cover2">
-                    <h4 class="darkFont">Night To Day</h4>
-                    <a class="songClick" href="audio/NightToDay.mp3">
-                        <div class="play-btn"></div>
-                    </a>
-                </div>
-                <div class="songDetails">
-                    <h5><span>artist: </span>Aldrin</h5>
-                    <h5><span>Duration: </span>4:17</h5>
-                </div>
-            </li>
-        </ul>
+                    </div>
+                </li>
+                <li class="songBlock" data-ng-show="showalbum2">
+                    <div class="song cover2">
+                        <h4 class="darkFont">Night To Day</h4>
+                        <a class="songClick" ng-click="player=true" href="audio/NightToDay.mp3">
+                            <div class="play-btn"></div>
+                        </a>
+                    </div>
+                    <div class="songDetails">
+                        <h5><span>artist: </span>Aldrin</h5>
+                        <h5><span>Duration: </span>4:17</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
-
-    <!-- Photography Section -->
-    <!--<section id="photography" class="container content-section text-center">-->
-        <!--<div class="row">-->
-            <!--<div class="col-lg-8 col-lg-offset-2">-->
-                <!--<h2>Photography</h2>-->
-                <!--<div class="line up20"></div>-->
-                <!--<p></p>-->
-                <!--<ul class="list-inline banner-social-buttons">-->
-
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</section>-->
-
-    <section id="photography" class="container content-section text-center">
-        <div class="row">
+    <section id="photography" class="content-section text-center">
+        <div class="header">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Photography</h2>
                 <div class="line up20"></div>
-                <p></p>
-                <ul class="list-inline banner-social-buttons">
-
-                </ul>
             </div>
+        </div>
+        <div class="photographyBody">
+            <p>test body</p>
         </div>
     </section>
 
@@ -339,8 +323,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
     <script src="js/mainCtrl.js"></script>
 </body>
-
 </html>
