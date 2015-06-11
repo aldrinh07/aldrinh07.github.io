@@ -616,7 +616,7 @@ h5 span {
 /*css parallax*/
 
 .photographyBody {
-    background-image: url(../img/PhotographyBG.jpg);
+    background-image: url(../img/PhotographyBGPortrait.jpg);
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
@@ -626,7 +626,7 @@ h5 span {
 
 
 .intro {
-    background-image: url(../img/solo.jpg);
+    background-image: url(../img/soloPortrait.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -647,14 +647,14 @@ h5 span {
     padding: 50px;
     width: 100%;
     height: calc(100% - 206px);
-    background-image: url(../img/solo.jpg);
+    background-image: url(../img/soloPortrait.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
 
 .aboutBody {
     padding: 50px;
-    background-image: url(../img/solo.jpg);
+    background-image: url(../img/soloPortrait.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -664,25 +664,25 @@ h5 span {
     padding-bottom: 50px;
     width: 100%;
     height: calc(100% - 206px);
-    background-image: url(../img/solo.jpg);
+    background-image: url(../img/soloPortrait.jpg);
     background-attachment: fixed;
     background-size: cover;
 
 }
-@media(max-width:768px) {
+@media(min-width:768px) {
     .intro {
-        background-image: url(../img/soloPortrait.jpg);
+        background-image: url(../img/solo.jpg);
     }
     .photographyBody {
-        background-image: url(../img/PhotographyBGPortrait.jpg);
+        background-image: url(../img/PhotographyBG.jpg);
     }
     .webBody {
-        background-image: url(../img/soloPortrait.jpg);
+        background-image: url(../img/solo.jpg);
     }
     .aboutBody {
-        background-image: url(../img/soloPortrait.jpg);
+        background-image: url(../img/solo.jpg);
     }
     .musicBody {
-        background-image: url(../img/soloPortrait.jpg);
+        background-image: url(../img/solo.jpg);
     }
 }
