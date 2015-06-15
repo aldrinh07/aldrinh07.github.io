@@ -14,6 +14,9 @@ $(window).scroll(function() {
     }
 });
 
+
+//$(".navbar").toggleClass( "top-nav-collapse", true );
+
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {

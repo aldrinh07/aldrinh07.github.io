@@ -32,7 +32,7 @@
 </head>
 <body data-ng-controller="mainCtrl"  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top" data-ng-class="{'top-nav-collapse' : scrollLoc}" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -92,7 +92,8 @@
 
     <!-- About Section -->
     <section id="about" class="text-center">
-                <div class="header">
+        <div class="gap"></div>
+        <div class="header">
                     <h2>About</h2>
                     <div class="line"></div>
                 </div>
@@ -108,15 +109,17 @@
 
     <!-- Web Development Section -->
     <section id="web" class="content-section text-center">
-            <div class="header">
-                <h2>Web Development</h2>
-                <div class="line up20"></div>
-            </div>
-            <div class="webBody"></div>
+        <div class="gap"></div>
+        <div class="header">
+            <h2>Web Development</h2>
+            <div class="line up20"></div>
+        </div>
+        <div class="webBody"></div>
     </section>
 
     <!-- Music Section -->
     <section id="music" class="content-section text-center">
+        <div class="gap"></div>
         <div class="header">
             <!--<div class="col-lg-8 col-lg-offset-2">-->
             <h2>Music Compositions</h2>
@@ -268,6 +271,7 @@
         </div>
     </section>
     <section id="photography" class="content-section text-center">
+        <div class="gap"></div>
         <div class="header">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Photography</h2>
@@ -283,6 +287,7 @@
     <section id="contact" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+                <div class="gap"></div>
                 <h2>Contact</h2>
                 <div class="line up20"></div>
                 <p>Feel free to email me, whether you need help with anything, or to just say hello!</p>
@@ -323,6 +328,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
     <script src="js/mainCtrl.js"></script>
 </body>
 </html>
