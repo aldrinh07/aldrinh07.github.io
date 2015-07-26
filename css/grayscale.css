@@ -201,9 +201,9 @@ a:focus {
     width: 100%;
 }
 
-.intro-body {
-    outline: 1px solid green;
-}
+/*.intro-body {*/
+    /*outline: 1px solid green;*/
+/*}*/
 
 .intro .intro-body {
     display: table-cell;
@@ -844,7 +844,7 @@ h5 span {
 
 .aboutBody {
     position: relative;
-    outline: 1px solid green;
+    /*outline: 1px solid green;*/
     padding-top: 20px;
     padding-left: 25px;
     padding-right: 25px;
