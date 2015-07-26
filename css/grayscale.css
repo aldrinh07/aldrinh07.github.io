@@ -7,19 +7,24 @@
     /*outline: 1px red solid;*/
 /*}*/
 
+html {
+    margin: 0 auto;
+    /*border: 2px solid orange;*/
+    width: 100%;
+    height: 100%;
+    /*background-color: red;*/
+}
+
 body {
+    margin: 0 auto;
     width: 100%;
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-image: url(../img/solo.jpg);
-    background-attachment: fixed;
-    background-size: cover;
 }
 
-html {
-    width: 100%;
-    height: 100%;
+.outline {
+    outline: 1px solid yellow;
 }
 
 h1,
@@ -54,6 +59,10 @@ p {
     }
 }
 
+.color {
+    color: #E5E5BE;
+}
+
 a {
     color: #42dca3;
     -webkit-transition: all .3s ease-in-out;
@@ -65,6 +74,15 @@ a:hover,
 a:focus {
     text-decoration: none;
     color: #1d9b6c;
+}
+
+
+/*background: -webkit-linear-gradient(180deg, #003973 10%, #E5E5BE 90%); *//* Chrome 10+, Saf5.1+ */
+
+
+.paragraph {
+    text-align: left;
+    padding-top: 20px;
 }
 
 .light {
@@ -152,10 +170,10 @@ a:focus {
 .intro {
     display: table;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
+    color: rgba(255, 255, 255, .7);
     /*border-bottom: 1px red solid;*/
     /*background: url(../img/aldrin.jpg) no-repeat bottom center scroll;*/
     /*background-color: rgba(255,255,255,.3);*/
@@ -165,31 +183,57 @@ a:focus {
     /*-o-background-size: cover;*/
 }
 
+#intro-background {
+    position: relative;
+    background-image: url(../img/solo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    /*outline: 4px solid blue;*/
+    height: calc(100% + 50px);
+    width: 100%;
+}
+
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 60px;
 }
 
 .intro .intro-body .intro-text {
     font-size: 18px;
 }
 
+.intro {
+    padding: 0;
+}
+
+.brand-header {
+    position: relative;
+    top: -180px;
+}
+
+.intro-info {
+    position: relative;
+    top: 130px;
+}
+
+
 @media(min-width:768px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 90px;
     }
 
     .intro .intro-body .intro-text {
         font-size: 26px;
+    }
+
+    .brand-header {
+        /*position: relative;*/
+        top: -100px;
     }
 }
 
@@ -197,6 +241,91 @@ a:focus {
 #about, #contact, #photography{
     width: 100%;
     /*background-color: rgba(255,255,255,.3) ;*/
+
+}
+
+
+#background {
+    /*outline: 2px solid green;*/
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: calc(100% + 50px);
+}
+
+#about-background {
+    /*outline: 2px solid green;*/
+    position: relative;
+    top: 50px;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url(../img/missionary.jpg);
+    background-size: cover;
+}
+
+
+#web-background {
+    /*outline: 2px solid green;*/
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: calc(100% + 50px);
+    background-attachment: fixed;
+    background-image: url(../img/PhotoSky.jpg);
+    background-size: cover;
+}
+
+#music-background {
+    /*outline: 2px solid green;*/
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: calc(100% + 50px);
+    background-attachment: fixed;
+    background-image: url(../img/intro-bg.jpg);
+    background-size: cover;
+}
+
+#photography-background {
+    /*outline: 2px solid green;*/
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: calc(100% + 50px);
+    background-image: url(../img/PhotographyBG.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#contact-background {
+    /*outline: 2px solid green;*/
+    position: relative;
+    width: 100%;
+    height: calc(100% + 50px);
+    background-image: url(../img/Boating.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media(max-width:768px) {
+    /*.intro {*/
+    /*background-image: url(../img/solo.jpg);*/
+    /*}*/
+    #photography-background {
+        background-image: url(../img/PhotographyBGPortrait.jpg);
+    }
+    /*.webBody {*/
+    /*background-image: url(../img/solo.jpg);*/
+    /*}*/
+    /*.aboutBody {*/
+    /*background-image: url(../img/solo.jpg);*/
+    /*}*/
+    /*.musicBody {*/
+    /*background-image: url(../img/solo.jpg);*/
+    /*}*/
+    /*.gap {*/
+    /*background-image: url(../img/solo.jpg);*/
+    /*}*/
 }
 
 #contact {
@@ -311,13 +440,41 @@ a:focus {
 
 .content-section {
     /*outline: 1px orange solid;*/
+    width: 100%;
+    min-width: 350px;
+    height: 100%;
+    /*border-bottom: 1px solid red;*/
+}
+
+.contact-section {
+    /*outline: 1px orange solid;*/
     /*margin-top: 56px;*/
     /*padding-top: 86px;*/
     width: 100%;
     min-width: 350px;
-    /*height: 100%;*/
-    min-height: calc(100% - 50px);
-    /*border-bottom: 1px solid red;*/
+    height: 100%;
+    /*height: calc(100% - 120px);*/
+    border-bottom: 1px solid red;
+}
+
+.contact {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0,0,0,.5);
+    position: relative;
+    /*top: 200px;*/
+}
+
+@media(max-width:768px) {
+    .contact {
+        /*padding-top: 20px;*/
+        /*padding-bottom: 20px;*/
+        /*background-color: rgba(0,0,0,.5);*/
+        /*position: relative;*/
+        width: 100%;
+        height: 100%;
+        /*top: 200px;*/
+    }
 }
 
 
@@ -417,6 +574,8 @@ ul.banner-social-buttons {
 }
 
 footer {
+    position:relative;
+    bottom: 0;
     padding: 50px 0;
 }
 
@@ -448,6 +607,12 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
+footer {
+    /*outline: 1px solid orange;*/
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
 /*additions*/
 
 
@@ -573,8 +738,8 @@ body {
 }
 
 .line {
-    width: 70%;
-    border-top: 1px solid red;
+    width: 50%;
+    border-top: 3px solid red;
     /*margin: 0 auto;*/
     margin-left: auto;
     margin-right: auto;
@@ -621,9 +786,6 @@ h5 span {
     padding: 50px;
     width: 100%;
     height: calc(100% - 189px);
-    background-image: url(../img/PhotographyBGPortrait.jpg);
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 
@@ -642,13 +804,12 @@ h5 span {
     /*outline: 1px solid yellow;*/
     padding-top: 30px;
     width: 100%;
-    height:139px;
+    height:89px;
     background-color: black;
 }
 
 .webBody {
     position: absolute;
-    outline: 1px red solid;
     padding: 50px;
     width: 100%;
     height: calc(100% - 189px);
@@ -657,11 +818,48 @@ h5 span {
     /*background-size: cover;*/
 }
 
+/*.contain {*/
+    /*outline: 2px solid pink;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+
 .aboutBody {
-    padding: 50px;
-    /*background-image: url(../img/soloPortrait.jpg);*/
-    /*background-attachment: fixed;*/
-    /*background-size: cover;*/
+    position: relative;
+    /*outline: 1px solid green;*/
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    left: 40%;
+    width: 60%;
+    height: calc(100% - 90px);
+
+
+    /*padding-bottom: 50px;*/
+    /*overflow: auto;*/
+    /*background: -webkit-linear-gradient(180deg, #003973 10%, #E5E5BE 90%); *//* Chrome 10+, Saf5.1+ */
+    /*background:    -moz-linear-gradient(180deg, #003973 10%, #E5E5BE 90%); *//* FF3.6+ */
+    /*background:     -ms-linear-gradient(180deg, #003973 10%, #E5E5BE 90%); *//* IE10 */
+    /*background:      -o-linear-gradient(180deg, #003973 10%, #E5E5BE 90%); *//* Opera 11.10+ */
+    /*background:         linear-gradient(180deg, #003973 10%, #E5E5BE 90%); *//* W3C */
+
+    /*height: calc(100% - 189px);*/
+}
+
+.text-box {
+    /*height: 60%;*/
+    position: relative;
+    /*width: auto;*/
+    width: 100%;
+    height: calc(100% - 200px);
+    /*border: 1px solid white;*/
+    /*padding-top: 5px;*/
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    overflow: auto;
 }
 
 .musicBody {
@@ -680,23 +878,12 @@ h5 span {
     /*background-attachment: fixed;*/
     /*background-size: cover;*/
 }
-@media(min-width:768px) {
-    /*.intro {*/
-        /*background-image: url(../img/solo.jpg);*/
-    /*}*/
-    .photographyBody {
-        background-image: url(../img/PhotographyBG.jpg);
-    }
-    /*.webBody {*/
-        /*background-image: url(../img/solo.jpg);*/
-    /*}*/
-    /*.aboutBody {*/
-        /*background-image: url(../img/solo.jpg);*/
-    /*}*/
-    /*.musicBody {*/
-        /*background-image: url(../img/solo.jpg);*/
-    /*}*/
-    /*.gap {*/
-        /*background-image: url(../img/solo.jpg);*/
-    /*}*/
-}
+
+/*.gap-about {*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*background-image: url(../img/intro-bg.jpg);*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+/*}*/
+
