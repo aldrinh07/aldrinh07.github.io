@@ -85,7 +85,7 @@ app.controller('mainCtrl', function($scope, $http){
                 url:'/img/lessLogo.png',
                 tooltip: 'Less CSS'
             },{
-                url:'/img/bootstrapLogo.png',
+                url:'/img/BootstrapLogo.png',
                 tooltip: 'Bootstrap'
             }
             ],
