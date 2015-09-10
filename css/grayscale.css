@@ -849,6 +849,7 @@ h5 span {
     padding: 50px;
     width: 100%;
     height: calc(100% - 189px);
+    overflow: auto;
     /*background-image: url(../img/soloPortrait.jpg);*/
     /*background-attachment: fixed;*/
     /*background-size: cover;*/
@@ -918,7 +919,7 @@ h5 span {
 /*------------------------------------ WEB DEVELOPMENT SECTION---------------------------------------*/
 
 .project-card-container-lg {
-    height: 350px;
+    height: 400px;
     padding: 20px;
 }
 
@@ -927,61 +928,137 @@ h5 span {
     height: 100%;
     background-color: rgb(247, 247, 247);
     margin: 0 auto;
+    padding:10px;
     overflow: hidden;
 }
 
-.bottom-info {
-    background-color: #cbcbcb;
-    position: relative;
-    bottom: -50px;
-    width: 50px;
-    height: 50px;
-    left: calc(100% - 70px);
-    transition: all 0.3s ease-in-out;
-    border-radius: 50%;
+.project-main-screen {
+    position: absolute;
+    transition: all .2s ease-in-out;
+    left: 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 120px);
+    background: no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 5;
 }
 
-.bottom-info .open-info{
+.project-card:hover .project-main-screen {
+    transition: all .2s ease-in-out;
+    width: calc(100% - 120px);
+    height: calc(100% - 245px);
+}
+
+.bottom-info {
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    left: calc(100% - 80px);
+    border-radius: 50%;
+    z-index: 10;
+    padding: 5px;
+}
+
+.project-card:hover .bottom-info {
+    transition: all 0.2s ease-in-out;
+    /*color: black;*/
+    bottom: 90px;
+    /*background-color: black;*/
+    width: calc(100% - 120px);
+    height: 115px;
+    left: 30px;
+    border-radius: 0;
+}
+
+.open-title {
+    transition: all .2s ease-in-out;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    height: 31px;
+    background-color: rgba(0,0,0,.5);
+    /*top: 10px;*/
+    /*width: calc(100% - 110px);*/
+    visibility: hidden;
+    opacity: 0;
+    z-index:10
+}
+
+
+
+.project-card:hover .open-title{
+    transition: all 1s ease-in-out;
+    opacity:1;
+    visibility: visible;
+}
+
+.open-info{
     visibility: hidden;
     opacity:0;
 }
 
-.project-card:hover .bottom-info .open-info{
+.project-card:hover .open-info{
     transition: all 1s ease-in-out;
     opacity:1;
     visibility: visible;
 }
 
 .bottom-info .closed-info{
+    transition: all .2s ease-in-out;
     position: absolute;
     left: 0px;
     right: 0px;
     top: 5px;
-    transition: all .2s ease-in-out;
     opacity:1;
     visibility: visible;
 }
 
 .project-card:hover .bottom-info .closed-info{
-    /*transition: all 1s ease-in-out;*/
+    transition: all .2s ease-in-out;
     position: absolute;
     opacity:0;
     visibility: hidden;
 }
 
-.project-card:hover .bottom-info {
-    bottom: 0px;
-    width: 100%;
-    height: 115px;
-    left: 0px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 0;
+.logos-column {
+    position: absolute;
+    /*z-index: 10;*/
+    right: 30px;
+    width: 50px;
+    height: 380px;
 }
+
+.logo, .logo img {
+    width: 50px;
+    /*height: 50px;*/
+    margin-bottom: 3px;
+}
+
+.summary {
+    font-size: 12px;
+}
+
+/*.side-icons {*/
+    /**/
+/*}*/
+
+/*.project-card:hover .side-icons {*/
+    /**/
+/*}*/
+
+
 
 #web-carousel{
     width: 100%;
     overflow: hidden;
 }
+
 
 
 

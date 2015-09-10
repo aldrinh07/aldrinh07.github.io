@@ -40,9 +40,24 @@ app.controller('mainCtrl', function($scope, $http){
     $scope.projectsLG = [
         {
             name: 'myConnects',
+            summary: 'myConnects is my final Project for DevMountain. Need a photographer? Need to tint your car? need your Computer fixed? We all have more connections than we think. this app lets you find those friends that can help.',
             url: 'https://myconnects.firebaseapp.com',
+            logos: [{
+                url:'img/angularfireLogo.png',
+                tooltip: 'AngularFire'
+            },{
+                url:'/img/materialLogo.png',
+                tooltip: 'AngularMaterial'
+            },{
+                url:'/img/htmlLogo.png',
+                tooltip: 'HTML5'
+            },{
+                url:'/img/cssLogo.png',
+                tooltip: 'CSS'
+            }
+            ],
             screens: [{
-                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
+                url: 'https://dl.dropboxusercontent.com/s/aoj196m3e9yh8wf/Screenshot%202015-09-09%2014.15.17.png?dl=0',
                 content: 'login page'
             }, {
                 url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
@@ -51,6 +66,23 @@ app.controller('mainCtrl', function($scope, $http){
         },{
             name: 'XPayable',
             url: 'still in development',
+            logos: [{
+                url:'img/angular-logo.png',
+                tooltip: 'AngularJS'
+            },{
+                url:'img/awsLogo.png',
+                tooltip: 'Amazon Web Services'
+            },{
+                url:'/img/htmlLogo.png',
+                tooltip: 'HTML5'
+            },{
+                url:'/img/lessLogo.png',
+                tooltip: 'Less CSS'
+            },{
+                url:'/img/bootstrapLogo.png',
+                tooltip: 'Bootstrap'
+            }
+            ],
             screens: [{
                 url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
                 content: 'login page'
@@ -58,37 +90,7 @@ app.controller('mainCtrl', function($scope, $http){
                 url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
                 content: 'main invoices page'
             }]
-        },{
-            name: 'chat',
-            url: 'still in development',
-            screens: [{
-                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
-                content: 'login page'
-            }, {
-                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
-                content: 'main invoices page'
-            }]
-        },{
-            name: 'other',
-            url: 'still in development',
-            screens: [{
-                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
-                content: 'login page'
-            }, {
-                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
-                content: 'main invoices page'
-            }]
-        },{
-            name: 'other',
-            url: 'still in development',
-            screens: [{
-                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
-                content: 'login page'
-            }, {
-                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
-                content: 'main invoices page'
-            }]
-        },
+        }
     ];
 
 // get song data

@@ -152,16 +152,25 @@
             </div>
             <div class="webBody container">
                 <div class="row">
-                    <div ng-repeat="project in projectsLG" class="project-card-container-lg col-lg-4">
+                    <div ng-repeat="project in projectsLG" class="project-card-container-lg col-sm-6 col-md-6 col-lg-4">
                         <div class="project-card card-hover">
-                            <h3>{{project.name}}</h3>
-                            <div ng-repeat="screen in project.screens">
-                                <p>{{screen.content}}</p>
+                            <div class="logos-column">
+                                <div class="logo" ng-repeat="logo in project.logos">
+                                        <img ng-src="{{logo.url}}"/>
+                                </div>
                             </div>
+                            <div class="open-title">
+                                <p>{{project.name}}</p>
+                            </div>
+                            <div class="project-main-screen" style="background-image: url({{project.screens[0].url}})"></div>
+                            <!--<div ng-repeat="screen in project.screens">-->
+                                <!--<p>{{screen.content}}</p>-->
+                            <!--</div>-->
                             <div class="bottom-info">
                                 <i class="fa fa-info closed-info fa-3x"></i>
-                                <h2 class="open-info">test info</h2>
+                                <p class="open-info summary">{{project.summary}}</p>
                             </div>
+
                         </div>
                     </div>
 
