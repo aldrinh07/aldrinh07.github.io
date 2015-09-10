@@ -49,6 +49,9 @@ app.controller('mainCtrl', function($scope, $http){
                 url:'/img/materialLogo.png',
                 tooltip: 'AngularMaterial'
             },{
+                url:'/img/jsLogo.png',
+                tooltip: 'JavaScript'
+            },{
                 url:'/img/htmlLogo.png',
                 tooltip: 'HTML5'
             },{
@@ -72,6 +75,9 @@ app.controller('mainCtrl', function($scope, $http){
             },{
                 url:'img/awsLogo.png',
                 tooltip: 'Amazon Web Services'
+            },{
+                url:'/img/jsLogo.png',
+                tooltip: 'JavaScript'
             },{
                 url:'/img/htmlLogo.png',
                 tooltip: 'HTML5'
