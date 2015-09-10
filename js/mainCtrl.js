@@ -37,6 +37,60 @@ app.controller('mainCtrl', function($scope, $http){
         $scope.showalbum2 = true;
     }
 
+    $scope.projectsLG = [
+        {
+            name: 'myConnects',
+            url: 'https://myconnects.firebaseapp.com',
+            screens: [{
+                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
+                content: 'login page'
+            }, {
+                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
+                content: 'main invoices page'
+            }]
+        },{
+            name: 'XPayable',
+            url: 'still in development',
+            screens: [{
+                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
+                content: 'login page'
+            }, {
+                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
+                content: 'main invoices page'
+            }]
+        },{
+            name: 'chat',
+            url: 'still in development',
+            screens: [{
+                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
+                content: 'login page'
+            }, {
+                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
+                content: 'main invoices page'
+            }]
+        },{
+            name: 'other',
+            url: 'still in development',
+            screens: [{
+                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
+                content: 'login page'
+            }, {
+                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
+                content: 'main invoices page'
+            }]
+        },{
+            name: 'other',
+            url: 'still in development',
+            screens: [{
+                url: 'https://dl.dropboxusercontent.com/s/17q448b16v7149m/Screenshot%202015-09-09%2014.56.48.png?dl=0',
+                content: 'login page'
+            }, {
+                url: 'https://dl.dropboxusercontent.com/s/ikiszl2rssvjpds/Screenshot%202015-09-09%2014.58.17.png?dl=0',
+                content: 'main invoices page'
+            }]
+        },
+    ];
+
 // get song data
 
 //    $http.get("./audio/music-data.json").then(function(res){
